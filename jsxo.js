@@ -35,7 +35,7 @@ function play(){
 		vl[l-1]= document.getElementById('d'+l);
 	for(var k=0;k<9;k++)
 		vll[k]=k+1;
-	audio1('tag','body','win3','l2');
+	//audio1('tag','body','win3','l2');
 	var capt=document.getElementById('cc');
 	var div=document.getElementsByClassName('d');
 	for (var k =0;k<9;k++) {
@@ -382,12 +382,18 @@ function change(obj){
 				for(var j=0;j<10;j++){
 					btn[j].style.pointerEvents="none";
 					capt.innerHTML=ply+" gagne.";
-					if(ply=="x")
+					if(ply=="x"){
 						i=0;
-					else if(ply=="o")
+						if(j==0)
+						audio1('tag','body','win01','l3');
+
+					}
+					else if(ply=="o"){
+						if(j==0)
+						audio1('tag','body','false2','l2');
 						i=1;
-					if(j==0)
-						audio1('tag','body','win01','l1');
+					}
+					
 					if(ply=="x"){
 						
 						if(j==0)
@@ -410,7 +416,7 @@ function change(obj){
 				}
 			}
 			else tent++;
-			audio1('tag','body','click1','l2');
+			audio1('tag','body','click1','l4');
 			for(var z=0;z<9;z++){
 				if((vl[z].getAttribute("value")=='x')||(vl[z].getAttribute("value")=='o'))
 					;
@@ -423,7 +429,7 @@ function change(obj){
 				var t=setTimeout(function(){
 					play();
 				},3000);
-				audio1('tag','body','false2','l2');
+				
 				document.getElementById("cc").innerHTML="NULL";
 				for(var j=0;j<10;j++){
 					vl[j].style.backgroundColor="yellow";
