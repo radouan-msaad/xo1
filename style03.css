@@ -1,5 +1,5 @@
 #jeu{
-	width: 914px;
+	width: 954px;
 	margin-left: 0;
 	border: 2px solid tomato;
 }
@@ -9,12 +9,12 @@
 	height:75px;
 	text-align: center;
 	color: red;
-	width: 914px;
+	width: 954px;
 }
 .point{
 	font-size: 60px;
 	height:75px;
-	width: 914px;
+	width: 954px;
 	color: white;
 	text-align: center;
 }
@@ -29,10 +29,10 @@ table{
 	border-top:2px solid tomato;
 }
 td>div{
-	height:300px;
-	width:300px;
+	height:314px;
+	width:314px;
 	background:aqua;
-	font-size:240px;
+	font-size:250px;
 	text-align: center;
 	cursor: pointer;
 }
@@ -43,7 +43,7 @@ caption{
 	caption-side: bottom;
 }
 #rr{
-	width: 913px;
+	width: 953px;
 	text-align: center;
 	color: black;
 	font-size: 60px;
