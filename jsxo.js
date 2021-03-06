@@ -384,27 +384,28 @@ function change(obj){
 					capt.innerHTML=ply+" gagne.";
 					if(ply=="x"){
 						i=0;
-						if(j==0)
-						audio1('tag','body','win01','l3');
-
 					}
 					else if(ply=="o"){
-						if(j==0)
-						audio1('tag','body','false2','l2');
 						i=1;
+			
 					}
 					
 					if(ply=="x"){
 						
-						if(j==0)
+						if(j==0){
+							audio1('tag','body','win01','l3');
 							p[1]++;
+						}
 						point[1].innerHTML="x: "+p[1];
 						capt.style.backgroundColor="green";
 					}
-					else{
+					else if(ply=="o"){
 						
-						if(j==0)
+						if(j==0){
+							audio1('tag','body','false2','l2');
 							p[0]++;
+
+						}
 						point[0].innerHTML="o: "+p[0];
 						capt.style.backgroundColor="red";
 					}
