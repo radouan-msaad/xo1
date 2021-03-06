@@ -11,6 +11,11 @@ var y=[];
 var rdm=[];
 var vle=[];
 var vl=[];
+document.onload=function(){
+	setTimeout(function(){
+		document.getElementById('fst').style.display="none";
+	},3000);
+}
 window.onload=function(){
 	setTimeout(function(){
 		document.getElementById('fst').style.display="none";
