@@ -11,6 +11,11 @@ var y=[];
 var rdm=[];
 var vle=[];
 var vl=[];
+window.onload=function(){
+	setTimeout(function(){
+		document.getElementById('fst').style.display="none";
+	},3000);
+}
 function audio1(type,nom,src,id) {
 	if(type=='class')
 		var doc=document.getElementsByClassName(nom)[0];
