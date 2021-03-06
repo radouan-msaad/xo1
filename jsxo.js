@@ -47,7 +47,7 @@ function play(){
 			div[k].style.backgroundColor="aqua";
 			div[k].setAttribute("value",(k+1));
 			div[k].innerHTML="";
-			capt.innerHTML="jeu xo";
+			capt.innerHTML="RADOUAN MSAAD";
 			capt.style.color="red";
 			capt.style.backgroundColor="white";
 		}
