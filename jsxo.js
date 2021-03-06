@@ -201,7 +201,7 @@ function change(obj){
 				else if((vll[0]=="x")&&(vll[2]=="x")&&(vll[1]==2)){
 					pos=2;
 				}
-				else if((vll[1]=="x")&&(vll[2]=="x")&&(vll[3]==4)){
+				else if((vll[1]=="x")&&(vll[2]=="x")&&(vll[0]==1)){
 					pos=1;
 				}
 				//3
@@ -219,7 +219,7 @@ function change(obj){
 					pos=7;
 				}
 				else if((vll[2]=="x")&&(vll[6]=="x")&&(vll[4]==5)){
-					pos=4;
+					pos=5;
 				}
 				else if((vll[4]=="x")&&(vll[6]=="x")&&(vll[2]==3)){
 					pos=3;
