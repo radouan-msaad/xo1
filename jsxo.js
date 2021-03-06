@@ -14,12 +14,12 @@ var vl=[];
 document.onload=function(){
 	setTimeout(function(){
 		document.getElementById('fst').style.display="none";
-	},3000);
+	},2000);
 }
 window.onload=function(){
 	setTimeout(function(){
 		document.getElementById('fst').style.display="none";
-	},3000);
+	},2000);
 }
 function audio1(type,nom,src,id) {
 	if(type=='class')
@@ -418,7 +418,13 @@ function change(obj){
 						}
 						point[0].innerHTML="o: "+p[0];
 						capt.style.backgroundColor="red";
+						
 					}
+					var pt=document.getElementById('pt');
+						pt.innerHTML="o: "+p[0]+" - x: "+p[1];
+						setTimeout(function(){
+							pt.innerHTML="";
+						},3000);
 					capt.style.color="white";
 
 					for(var d=0;d<10;d++){
@@ -437,6 +443,13 @@ function change(obj){
 			}
 			if(m==0){
 				m=0;
+				var fst=document.getElementById('fst');
+				setTimeout(function(){
+		          fst.style.display="block";
+	               },2000);
+				setTimeout(function(){
+		          fst.style.display="none";
+	               },3000);
 				var t=setTimeout(function(){
 					play();
 				},3000);

@@ -7,6 +7,16 @@ img{
 	width: 800px;
 	display: block;
 }
+#pt{
+	position: absolute;
+	top: 400px;
+	left: 200px;
+	z-index: 3;
+	font-size: 160px;
+	color: red;
+	display: block;
+	background: white;
+}
 #jeu{
 	width: 954px;
 	margin-left: 0;
