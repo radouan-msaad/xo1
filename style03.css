@@ -46,6 +46,11 @@ table{
 	border-bottom:2px solid tomato;
 	border-top:2px solid tomato;
 }
+table{
+	border-collapse: separate;
+	border-spacing: 2px;
+
+}
 td>div{
 	height:314px;
 	width:314px;

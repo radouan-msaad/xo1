@@ -21,7 +21,7 @@ window.onload=function(){
 		document.getElementById('fst').style.display="none";
 	},2000);
 }
-function audio1(type,nom,src,id) {
+/*function audio1(type,nom,src,id) {
 	if(type=='class')
 		var doc=document.getElementsByClassName(nom)[0];
 	if(type=='tag')
@@ -38,7 +38,7 @@ function audio1(type,nom,src,id) {
 	doc.append(audio);
 	audio.style.display="none";
 	audio.style.width="80%";
-}
+}*/
 function play(){
 	var r=14;
 	for(var l=1;l<10;l++)
@@ -403,7 +403,7 @@ function change(obj){
 					if(ply=="x"){
 						
 						if(j==0){
-							audio1('tag','body','win01','l3');
+							//audio1('tag','body','win01','l3');
 							p[1]++;
 						}
 						point[1].innerHTML="x: "+p[1];
@@ -412,7 +412,7 @@ function change(obj){
 					else if(ply=="o"){
 						
 						if(j==0){
-							audio1('tag','body','false2','l2');
+							//audio1('tag','body','false2','l2');
 							p[0]++;
 
 						}
@@ -433,7 +433,7 @@ function change(obj){
 				}
 			}
 			else tent++;
-			audio1('tag','body','click1','l4');
+			//audio1('tag','body','click1','l4');
 			for(var z=0;z<9;z++){
 				if((vl[z].getAttribute("value")=='x')||(vl[z].getAttribute("value")=='o'))
 					;
