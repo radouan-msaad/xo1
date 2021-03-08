@@ -48,9 +48,6 @@ function play(){
 	var capt=document.getElementById('cc');
 	var div=document.getElementsByClassName('d');
 	for (var k =0;k<9;k++) {
-		tent=0;
-		if(k==r-1);
-		else{
 			ply="x";
 			div[k].style.pointerEvents="auto";
 			div[k].style.backgroundColor="aqua";
@@ -61,7 +58,6 @@ function play(){
 			capt.style.backgroundColor="white";
 		}
 	}
-}
 function change(obj){
 	i=0;
 	m=0;
