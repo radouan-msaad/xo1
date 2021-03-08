@@ -7,7 +7,11 @@ var p=[0,0];
 var ply="x";
 var tent=0;
 var vll=[];
+var o1=[];
+var o2=0;
 var y=[];
+var x2=0;
+var x1=[];
 var rdm=[];
 var vle=[];
 var vl=[];
@@ -40,6 +44,14 @@ window.onload=function(){
 	audio.style.width="80%";
 }*/
 function play(){
+	x2=0;
+	o2=0;
+	for(var ee=0;ee<9;ee++)
+		x1[ee]=0;
+	x1.length=0;
+	for(var ee=0;ee<9;ee++)
+		o1[ee]=0;
+	o1.length=0;
 	for(var l=1;l<10;l++)
 		vl[l-1]= document.getElementById('d'+l);
 	for(var k=0;k<9;k++)
@@ -48,9 +60,6 @@ function play(){
 	var capt=document.getElementById('cc');
 	var div=document.getElementsByClassName('d');
 	for (var k =0;k<9;k++) {
-		tent=0;
-		if(k==r-1);
-		else{
 			ply="x";
 			div[k].style.pointerEvents="auto";
 			div[k].style.backgroundColor="aqua";
@@ -61,7 +70,6 @@ function play(){
 			capt.style.backgroundColor="white";
 		}
 	}
-}
 function change(obj){
 	i=0;
 	m=0;
@@ -98,10 +106,16 @@ function change(obj){
 			for(var z=0;z<9;z++){
 				if((vll[z]=='x')||(vll[z]=='o'))
 					;
-				else{ y[m]=z+1;
+				else{
+					y[m]=z+1;
 					m++;
 				}
-			}
+			    }
+				  if(vll[obj-1]=='x'){
+				  x1[x2]=obj;
+				  x2++;
+				}
+
 			var r=Math.floor(Math.random()*(m));
 			switch(y[r]){
 				case 1:pos=1; break;
@@ -113,16 +127,126 @@ function change(obj){
 				case 7:pos=7; break;
 				case 8:pos=8; break;
 				case 9:pos=9; break;
-			}
-			if((vll[0]=="o")&&(vll[3]=="o")&&(vll[6]==7)){
+			  }
+			  
+			  if(x2==1){
+			if(x1[0]!=5)
+			   pos=5;
+			
+			if(x1[0]==5){
+				var q=2*Math.floor(Math.random()*(4));
+				switch(q){
+				case 0:pos=1; break;
+				case 2:pos=3; break;
+				case 4:pos=9; break;
+				case 6:pos=7; break;
+				case 8:pos=9; break;
+			  }
+	          }
+	          }
+	           if((x2==2)&&(x1[0]!=5)){
+	           	if((((x1[0]==1)||(x1[0]==9))&&((x1[1]==1)||(x1[1]==9)))||(((x1[0]==3)||(x1[0]==7))&&((x1[1]==3)||(x1[1]==7)))){
+	           		var w=2*Math.floor(Math.random()*(4))+1;
+	           		switch(w){
+				case 1:pos=2; break;
+				case 3:pos=4; break;
+				case 5:pos=6; break;
+				case 7:pos=8; break;
+			   }
+	           }
+	           if(((x1[0]==3)||(x1[0]==8))&&((x1[1]==3)||(x1[1]==8))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=6; break;
+				case 1:pos=7; break;
+				case 2:pos=9; break;
+			   }
+	           }
+	           if(((x1[0]==3)||(x1[0]==4))&&((x1[1]==3)||(x1[1]==4))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=1; break;
+				case 1:pos=2; break;
+				case 2:pos=7; break;
+			   }
+	           }
+	            if(((x1[0]==1)||(x1[0]==8))&&((x1[1]==1)||(x1[1]==8))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=4; break;
+				case 1:pos=6; break;
+				case 2:pos=9; break;
+			   }
+	           }
+	           if(((x1[0]==1)||(x1[0]==6))&&((x1[1]==1)||(x1[1]==6))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=2; break;
+				case 1:pos=3; break;
+				case 2:pos=9; break;
+			   }
+	           }
+	           //2
+	           if(((x1[0]==2)||(x1[0]==9))&&((x1[1]==2)||(x1[1]==9))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=1; break;
+				case 1:pos=3; break;
+				case 2:pos=6; break;
+			   }
+	           }
+	           if(((x1[0]==4)||(x1[0]==9))&&((x1[1]==4)||(x1[1]==9))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=1; break;
+				case 1:pos=7; break;
+				case 2:pos=8; break;
+			   }
+	           }
+	            if(((x1[0]==7)||(x1[0]==2))&&((x1[1]==7)||(x1[1]==2))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=1; break;
+				case 1:pos=3; break;
+				case 2:pos=4; break;
+			   }
+	           }
+	           if(((x1[0]==7)||(x1[0]==6))&&((x1[1]==7)||(x1[1]==6))){
+	           	var w=Math.floor(Math.random()*(3));
+	           	switch(w){
+				case 0:pos=3; break;
+				case 1:pos=8; break;
+				case 2:pos=9; break;
+			   }
+	           }
+	           }
+	           if((x2==2)&&(x1[0]==5)){
+	           	if((x1[1]==1)||(x1[1]==3)||(x1[1]==7)||(x1[1]==9)){
+	           		var w=Math.floor(Math.random()*(2));
+	           	   if((x1[1]==9)||(x1[1]==1)){
+	           	  	switch(w){
+				case 0:pos=3; break;
+				case 1:pos=7; break;
+			    }
+	           	  }
+	           	  if((x1[1]==7)||(x1[1]==3)){
+	           	  	switch(w){
+				case 0:pos=1; break;
+				case 1:pos=9; break;
+			    }
+	            }
+	           	}
+	            }
+				
+			    if((vll[0]=="o")&&(vll[3]=="o")&&(vll[6]==7)){
 				pos=7;
-			}
-			else if((vll[3]=="o")&&(vll[6]=="o")&&(vll[0]==1)){
+			    }
+			    else if((vll[3]=="o")&&(vll[6]=="o")&&(vll[0]==1)){
 				pos=1;
-			}
-			else if((vll[0]=="o")&&(vll[6]=="o")&&(vll[3]==4)){
+			    }
+			    else if((vll[0]=="o")&&(vll[6]=="o")&&(vll[3]==4)){
 				pos=4;
-			}
+			    }
 				//2
 				else if((vll[0]=="o")&&(vll[1]=="o")&&(vll[2]==3)){
 					pos=3;
@@ -273,15 +397,17 @@ function change(obj){
 				else if((vll[7]=="x")&&(vll[8]=="x")&&(vll[6]==7)){
 					pos=7;
 				}
+				
 				vl[pos-1].setAttribute("value","o");
 				vl[pos-1].innerHTML="o";
 				vl[pos-1].style.backgroundColor="orange";
 				vl[pos-1].style.pointerEvents="none";
 				vll[pos-1]="o";
-				
+				if(vll[pos-1]=='o'){
+				  o1[o2]=pos;
+				  o2++;
+				 }
 			}
-
-			
 			m=0;
 			vr();
 			function vr(){
