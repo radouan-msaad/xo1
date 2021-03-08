@@ -154,6 +154,20 @@ function change(obj){
 				case 7:pos=8; break;
 			   }
 	           }
+	           if(((vll[3]=='x')&&(vll[1]=='x'))||((vll[7]=='x')&&(vll[5]=='x'))){
+	           		var w=Math.floor(Math.random()*(2));
+	           	switch(w){
+				case 0:pos=3; break;
+				case 1:pos=7; break;
+			   }
+	           }
+	           if(((vll[3]=='x')&&(vll[7]=='x'))||((vll[1]=='x')&&(vll[5]=='x'))){
+	           		var w=Math.floor(Math.random()*(2));
+	           	switch(w){
+				case 0:pos=1; break;
+				case 1:pos=9; break;
+			   }
+	           }
 	           if(((x1[0]==3)||(x1[0]==8))&&((x1[1]==3)||(x1[1]==8))){
 	           	var w=Math.floor(Math.random()*(3));
 	           	switch(w){
